@@ -1,10 +1,5 @@
 # Excel to Text ETL Automation Utility
 
-[![Build Status](https://shields.io)](#)
-[![Java Version](https://shields.io)](#)
-[![Dependency](https://shields.io)](#)
-[![Framework](https://shields.io)](#)
-
 An enterprise-grade, resilient CLI utility designed to automate data extraction, validation, and transformation workflows. Managed by a Google Guice dependency injection bootstrap layer, the application securely fetches high-volume Excel workbooks from cloud repositories, executes strict infrastructure checks, and exports optimized data packages to enterprise shared storage (SMB/UNC).
 
 ---
