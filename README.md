@@ -46,7 +46,7 @@ An enterprise-grade, resilient CLI utility designed to automate data extraction,
 ## Project Structure
 
 ```text
-StrukSummaryOfAnalytics/
+AdditionalBonus/
 ├── config/
 │   ├── Log4j2.xml              # Programmatic logger routing architecture (Editable)
 │   ├── system.properties       # Local runtime states (IGNORED BY GIT - Secret)
@@ -66,7 +66,7 @@ StrukSummaryOfAnalytics/
 │               └── AppModule.java     # Guice bootstrapping & TLS-validation layer
 ├── .gitignore                  # Strict Git filtering boundary rules
 ├── pom.xml                     # Maven version management matrix
-└── StrukSummaryOfAnalytics-0.0.1-SNAPSHOT.jar # Root-level workspace artifact
+└── AdditionalBonus.jar # Root-level workspace artifact
 ```
 
 ---
@@ -159,7 +159,7 @@ mvn clean package
 Thanks to the dynamic path resolution layer and the root-level deployment plugin, the application supports universal absolute path invocations. This single command structure ensures seamless execution whether triggered manually via terminal interfaces or orchestrated autonomously by OS schedulers (such as Windows Task Scheduler or Linux CRON daemons):
 
 ```bash
-java -jar "<path_to_application_home>\StrukSummaryOfAnalytics-0.0.1-SNAPSHOT.jar"
+java -jar /path/to/AdditionalBonus.jar"
 ```
 
 ---
