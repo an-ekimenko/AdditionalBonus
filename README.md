@@ -154,7 +154,7 @@ mvn clean package
 Thanks to the dynamic path resolution layer and the root-level deployment plugin, the application supports universal absolute path invocations. This single command structure ensures seamless execution whether triggered manually via terminal interfaces or orchestrated autonomously by OS schedulers (such as Windows Task Scheduler or Linux CRON daemons):
 
 ```bash
-java -jar /path/to/AdditionalBonus.jar"
+java -jar /path/to/AdditionalBonus.jar
 ```
 
 ---
@@ -167,7 +167,7 @@ Upon lifecycle termination, execution performance indicators are automatically p
 
 ```yaml
 output:
-  datetime: 202610-30:11:28:41
+  datetime: 2026-10-30:11:28:41
   returned_code: 0
 ```
 
