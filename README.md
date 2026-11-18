@@ -13,7 +13,11 @@ An enterprise-grade, resilient CLI utility designed to automate data extraction,
 * **Unified Enterprise Logging (Log4j2/SLF4J):** Replaces legacy console logging streams with an integrated Log4j2 engine. For streamlined enterprise monitoring, all operational metrics and debug diagnostics are replicated concurrently into both the console output and the persistent file repository `logs/common.log`.
 * **Granular Third-Party Log Filtering:** Explicitly orchestrates boundaries and logging levels targeting high-volume vendor sub-systems like `com.spire` and `org.asynchttpclient`. Suppresses verbose operational trace noise, ensuring audit stability in production environments.
 * **Formula-Driven Network Resiliency:** Features an automated multi-attempt loop to survive transient network drops. Handshake connection intervals and retry cool-down delays are calculated dynamically based on an exponential progression scale:
-  \[\text{Timeout} = \text{initial\_conn\_timeout\_ms} \times (1 + \text{attempt}^{(\text{attempt} - 1)})\]
+
+$$
+\text{Timeout} = \text{initialConnTimeoutMs} \times \left(1 + \text{attempt}^{(\text{attempt} - 1)}\right)
+$$
+
 * **Large File Optimization:** Configured with an intentional unlimited Read Timeout parameter combined with a formula-driven Handshake Timeout. This shields high-volume file transmissions (~10MB+) from premature session kills caused by network fluctuation.
 * **Decoupled Footprint Observability (YAML Report):** Guarantees the persistence of process metrics to `exchange/result.yaml` inside a global `finally` block, providing down-stream analytical orchestrators with crisp operational footprints containing execution timestamps and status codes.
 * **Resource Leak Prevention & Auto-Cleanup:** Implements explicit memory cleanup routines via `workbook.dispose()`. Temporary source `.xlsx` payloads are automatically wiped from the disk storage arrays immediately following verified conversions.
